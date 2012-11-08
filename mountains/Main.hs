@@ -22,14 +22,14 @@ module Main (main) where
 
 
 import Graphics.Rendering.OpenGL
-import Graphics.UI.GLUT
+import Graphics.UI.GLUT hiding (initState)
 
 import MyUtilities
 
 import Data.List
 import Data.IORef
-import Random
-import Char (toUpper)
+import System.Random
+import Data.Char (toUpper)
 
 
 type Pair t = (t, t)
@@ -136,10 +136,10 @@ display state = do
 
   let (xPan, yPan) = pan curState
 
-  translate $ Vector3 (xPan) (yPan) 0
+  translate $ Vector3 (doubleToGLfloat xPan) (doubleToGLfloat yPan) 0
 
-  rotate (doubleToFloat $ negate $ viewTheta curState) $ Vector3 1 0 0
-  rotate (doubleToFloat $ viewPhi curState) $ Vector3 0 0 1
+  rotate (doubleToGLfloat $ negate $ viewTheta curState) $ Vector3 1 0 0
+  rotate (doubleToGLfloat $ viewPhi curState) $ Vector3 0 0 1
 
   let
     d = 0.6
@@ -309,7 +309,7 @@ interpolateColor (lower, colorL) (upper, colorU) height = Color4 rH gH bH aH
 toColorVertex x y z = do
   color <- chooseColor z
   currentColor $= color
-  vertex $ Vertex3 x y z
+  vertex $ Vertex3 (doubleToGLfloat x) (doubleToGLfloat y) (doubleToGLfloat z)
 
 
 -- pointsToLines (x0,y0) (xn,yn) zs
@@ -372,10 +372,10 @@ drawTerrain mode (xl,yl) (xr,yr) hss@(fhs:_) = do
 -- Zeichnet halbtransparente Wasserfl�he zwischen zwei Punkten.
 drawClearWaterPlane (xl,yl) (xr,yr) = renderPrimitive Quads $ do
   currentColor $= cClearWater
-  vertex $ Vertex3 (xl) (yl) clearWaterLimit
-  vertex $ Vertex3 (xr) (yl) clearWaterLimit
-  vertex $ Vertex3 (xr) (yr) clearWaterLimit
-  vertex $ Vertex3 (xl) (yr) clearWaterLimit
+  vertex $ Vertex3 (doubleToGLfloat xl) (doubleToGLfloat yl) (doubleToGLfloat clearWaterLimit)
+  vertex $ Vertex3 (doubleToGLfloat xr) (doubleToGLfloat yl) (doubleToGLfloat clearWaterLimit)
+  vertex $ Vertex3 (doubleToGLfloat xr) (doubleToGLfloat yr) (doubleToGLfloat clearWaterLimit)
+  vertex $ Vertex3 (doubleToGLfloat xl) (doubleToGLfloat yr) (doubleToGLfloat clearWaterLimit)
 
 
 

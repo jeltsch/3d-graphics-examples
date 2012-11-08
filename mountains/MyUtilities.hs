@@ -17,8 +17,8 @@ module MyUtilities (
 
   Num (..),
   realToReal,
-  doubleToFloat,
-  floatToDouble,
+  doubleToGLfloat,
+  glfloatToDouble,
 
   interleave,
   inGroupsOf,
@@ -81,11 +81,11 @@ instance (Num a, Num a, Num a) => Num (a, a, a) where
 realToReal :: (Real a, Fractional b) => a -> b
 realToReal = fromRational . toRational
 
-doubleToFloat :: Double -> Float
-doubleToFloat = realToReal
+doubleToGLfloat :: Double -> GLfloat
+doubleToGLfloat = realToReal
 
-floatToDouble :: Float -> Double
-floatToDouble = realToReal
+glfloatToDouble :: GLfloat -> Double
+glfloatToDouble = realToReal
 
 
 -- Mischt zwei Listen elementweise abwechselnd

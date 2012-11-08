@@ -13,7 +13,7 @@ module Main (main) where
 --
 --------------------------------------------------------------------------------
 
-import Graphics.UI.GLUT
+import Graphics.UI.GLUT hiding (initState)
 import Graphics.Rendering.OpenGL
 
 import LSystem
@@ -21,7 +21,7 @@ import Turtle
 
 import MyUtilities
 
-import Char (toUpper)
+import Data.Char (toUpper)
 import Data.IORef
 
 import KochLSystem     -- Koch'sche Schneeflocke, Präfix: "koch"
@@ -111,9 +111,9 @@ display state = do
     (panX, panY) = pan curState
     rat = viewRatio curState
 
-  projection (-z) (z) (-z / rat) (z / rat) (-1000) (1000)
+  projection (-z) (z) (-z / realToReal rat) (z / realToReal rat) (-1000) (1000)
 
-  clearColor $= cBlack
+  clearColor $= Color4 0 0 0 0
   clear [ColorBuffer, DepthBuffer]
 
   loadIdentity
@@ -126,10 +126,10 @@ display state = do
 
   cCyanMaterial
 
-  translate $ Vector3 (doubleToFloat panX) (doubleToFloat panY) 0
+  translate $ Vector3 (doubleToGLfloat panX) (doubleToGLfloat panY) 0
 
-  rotate (doubleToFloat $ negate $ viewTheta curState) $ Vector3 1 0 0
-  rotate (doubleToFloat $ viewPhi curState) $ Vector3 0 0 1
+  rotate (doubleToGLfloat $ negate $ viewTheta curState) $ Vector3 1 0 0
+  rotate (doubleToGLfloat $ viewPhi curState) $ Vector3 0 0 1
 
   let i = derivationIndex curState
 
