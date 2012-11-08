@@ -449,7 +449,8 @@ nextTerrainStep (hss, gen) = (hss', gen')
       (zipWith interleave squares2 diamonds)
 
     squares2 = zipWith4 squareStep
-      hss (lastAndInit diamonds) (tailAndHead hss) (dsSquares2 `inGroupsOf` nx)
+      hss (map lastAndInit diamonds) (tailAndHead hss)
+      (dsSquares2 `inGroupsOf` nx)
 
     squares1 = zipWith4 squareStep
       (lastAndInit diamonds) hss diamonds (dsSquares1 `inGroupsOf` nx)
