@@ -1,3 +1,4 @@
+{-# LANGUAGE FlexibleInstances #-}
 module MyUtilities (
   cBlack,
   cLightGray,
