@@ -44,13 +44,13 @@ Executable l-systems
     Build-Depends:  base   >= 3.0 && < 5,
                     GLUT   >= 2.4 && < 2.6,
                     OpenGL >= 2.8 && < 2.10
-    HS-Source-Dirs: src src/l-systems
     Main-Is:        LSystems.hs
+    HS-Source-Dirs: src src/l-systems
 
 Executable mountains
     Build-Depends:  base   >= 3.0 && < 5,
                     GLUT   >= 2.4 && < 2.6,
                     OpenGL >= 2.8 && < 2.10,
                     random >= 1.0 && < 1.1
-    HS-Source-Dirs: src src/mountains
     Main-Is:        Mountains.hs
+    HS-Source-Dirs: src src/mountains
