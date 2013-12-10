@@ -41,16 +41,16 @@ Source-Repository this
     Tag:      3d-graphics-examples-0.0.0.0
 
 Executable l-systems
+    Main-Is:        LSystems.hs
     Build-Depends:  base   >= 3.0 && < 5,
                     GLUT   >= 2.4 && < 2.6,
                     OpenGL >= 2.8 && < 2.10
     HS-Source-Dirs: src src/l-systems
-    Main-Is:        LSystems.hs
 
 Executable mountains
+    Main-Is:        Mountains.hs
     Build-Depends:  base   >= 3.0 && < 5,
                     GLUT   >= 2.4 && < 2.6,
                     OpenGL >= 2.8 && < 2.10,
                     random >= 1.0 && < 1.1
     HS-Source-Dirs: src src/mountains
-    Main-Is:        Mountains.hs
