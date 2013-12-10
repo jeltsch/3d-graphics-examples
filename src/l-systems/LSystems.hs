@@ -19,7 +19,7 @@ import Graphics.Rendering.OpenGL
 import LSystem
 import Turtle
 
-import MyUtilities
+import Utilities
 
 import Data.Char (toUpper)
 import Data.IORef

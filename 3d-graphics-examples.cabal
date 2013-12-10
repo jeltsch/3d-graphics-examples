@@ -45,7 +45,7 @@ Executable l-systems
                     GLUT   >= 2.4 && < 2.6,
                     OpenGL >= 2.8 && < 2.10
     Main-Is:        LSystems.hs
-    Other-Modules:  MyUtilities
+    Other-Modules:  Utilities
                     ConiferLSystem
                     IslandLSystem
                     KochLSystem
@@ -60,5 +60,5 @@ Executable mountains
                     OpenGL >= 2.8 && < 2.10,
                     random >= 1.0 && < 1.1
     Main-Is:        Mountains.hs
-    Other-Modules:  MyUtilities
+    Other-Modules:  Utilities
     HS-Source-Dirs: src src/mountains

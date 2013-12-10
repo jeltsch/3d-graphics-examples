@@ -1,5 +1,5 @@
 {-# LANGUAGE FlexibleInstances #-}
-module MyUtilities (
+module Utilities (
   cBlack,
   cLightGray,
   cBlue,

@@ -24,7 +24,7 @@ module Main (main) where
 import Graphics.Rendering.OpenGL
 import Graphics.UI.GLUT hiding (initState)
 
-import MyUtilities
+import Utilities
 
 import Data.List
 import Data.IORef
