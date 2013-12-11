@@ -69,6 +69,10 @@ projection xl xu yl yu zl zu = do
 
 
 -- Vektoraddition, -subtraktion und Kreuzprodukt
+{-FIXME:
+    It is not right to treat vectors as numbers. Introduce separate operators
+    and then remove the LANGUAGE pragma above.
+-}
 instance (Num a, Num a, Num a) => Num (a, a, a) where
   (x1, y1, z1) + (x2, y2, z2) = (x1 + x2, y1 + y2, z1 + z2)
   (x1, y1, z1) - (x2, y2, z2) = (x1 - x2, y1 - y2, z1 - z2)
