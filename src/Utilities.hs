@@ -56,6 +56,7 @@ crMat (rd,gd,bd) (rs,gs,bs) exp = do
   materialSpecular Back $= Color4 rs gs bs 1.0
   materialShininess Back $= exp
 
+cCyanMaterial :: IO ()
 cCyanMaterial = crMat (0, 0.3, 0.3) (1, 1, 1.0) 5
 
 
