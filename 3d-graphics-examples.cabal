@@ -1,5 +1,5 @@
 Name:          3d-graphics-examples
-Version:       0.0.0.1
+Version:       0.0.0.2
 Cabal-Version: >= 1.8
 Build-Type:    Simple
 License:       BSD3
@@ -10,7 +10,7 @@ Author:        Matthias Reisner
 Maintainer:    wolfgang@cs.ioc.ee
 Stability:     provisional
 Homepage:      http://darcs.wolfgang.jeltsch.info/haskell/3d-graphics-examples
-Package-URL:   http://hackage.haskell.org/packages/archive/3d-graphics-examples/0.0.0.1/3d-graphics-examples-0.0.0.1.tar.gz
+Package-URL:   http://hackage.haskell.org/packages/archive/3d-graphics-examples/0.0.0.2/3d-graphics-examples-0.0.0.2.tar.gz
 Synopsis:      Examples of 3D graphics programming with OpenGL
 Description:   This package demonstrates how to program simple interactive 3D
                graphics with OpenGL. It contains two programs, which are both
@@ -38,7 +38,7 @@ Source-Repository head
 Source-Repository this
     Type:     darcs
     Location: http://darcs.wolfgang.jeltsch.info/haskell/3d-graphics-examples/main
-    Tag:      3d-graphics-examples-0.0.0.1
+    Tag:      3d-graphics-examples-0.0.0.2
 
 Executable mountains
     Build-Depends:  base   >= 3.0 && < 5,
