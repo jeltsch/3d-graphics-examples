@@ -29,7 +29,7 @@ Description:   This package demonstrates how to program simple interactive 3D
                who supervised this student project, is now maintaining these
                programs.
 Category:      Graphics, Fractals
-Tested-With:   GHC == 7.10.1
+Tested-With:   GHC == 8.0.1
 
 Source-Repository head
     Type:     darcs
@@ -43,8 +43,8 @@ Source-Repository this
 Executable mountains
     Build-Depends:  base   >= 3.0 && < 5,
                     GLUT   >= 2.4 && < 2.8,
-                    OpenGL >= 2.8 && < 2.13,
-                    random >= 1.0 && < 1.1
+                    OpenGL >= 2.8 && < 3.1,
+                    random >= 1.0 && < 1.2
     Extensions:     FlexibleContexts
     Main-Is:        Mountains.hs
     Other-Modules:  Utilities
@@ -53,7 +53,7 @@ Executable mountains
 Executable l-systems
     Build-Depends:  base   >= 3.0 && < 5,
                     GLUT   >= 2.4 && < 2.8,
-                    OpenGL >= 2.8 && < 2.13
+                    OpenGL >= 2.8 && < 3.1
     Extensions:     FlexibleContexts
     Main-Is:        LSystems.hs
     Other-Modules:  Utilities
