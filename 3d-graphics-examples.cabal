@@ -7,9 +7,9 @@ License-File:  LICENSE
 Copyright:     © 2006      Matthias Reisner;
                © 2012–2015 Wolfgang Jeltsch
 Author:        Matthias Reisner
-Maintainer:    wolfgang@cs.ioc.ee
+Maintainer:    wolfgang-it@jeltsch.info
 Stability:     provisional
-Homepage:      http://darcs.wolfgang.jeltsch.info/haskell/3d-graphics-examples
+Homepage:      http://hackage.haskell.org/package/3d-graphics-examples
 Package-URL:   http://hackage.haskell.org/packages/archive/3d-graphics-examples/0.0.0.2/3d-graphics-examples-0.0.0.2.tar.gz
 Synopsis:      Examples of 3D graphics programming with OpenGL
 Description:   This package demonstrates how to program simple interactive 3D
@@ -33,11 +33,11 @@ Tested-With:   GHC == 8.0.1
 
 Source-Repository head
     Type:     darcs
-    Location: http://darcs.wolfgang.jeltsch.info/haskell/3d-graphics-examples/main
+    Location: http://hub.darcs.net/jeltsch/3d-graphics-examples
 
 Source-Repository this
     Type:     darcs
-    Location: http://darcs.wolfgang.jeltsch.info/haskell/3d-graphics-examples/main
+    Location: http://hub.darcs.net/jeltsch/3d-graphics-examples
     Tag:      3d-graphics-examples-0.0.0.2
 
 Executable mountains
