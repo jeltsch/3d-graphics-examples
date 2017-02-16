@@ -9,8 +9,8 @@ Copyright:     © 2006      Matthias Reisner;
 Author:        Matthias Reisner
 Maintainer:    wolfgang-it@jeltsch.info
 Stability:     provisional
-Homepage:      http://hackage.haskell.org/package/3d-graphics-examples
-Package-URL:   http://hackage.haskell.org/package/3d-graphics-examples-0.0.0.2/3d-graphics-examples-0.0.0.2.tar.gz
+Homepage:      https://hackage.haskell.org/package/3d-graphics-examples
+Package-URL:   https://hackage.haskell.org/package/3d-graphics-examples-0.0.0.2/3d-graphics-examples-0.0.0.2.tar.gz
 Synopsis:      Examples of 3D graphics programming with OpenGL
 Description:   This package demonstrates how to program simple interactive 3D
                graphics with OpenGL. It contains two programs, which are both
